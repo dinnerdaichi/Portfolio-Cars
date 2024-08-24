@@ -1,0 +1,1548 @@
+@charset "UTF-8";
+/*--------------------------------------*
+  * foundation
+*--------------------------------------*/
+@import url("https://fonts.googleapis.com/css2?family=Zen+Old+Mincho:wght@500&display=swap");
+/* resset.dev • v5.0.2 */
+/* # =================================================================
+   # Global selectors
+   # ================================================================= */
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-text-size-adjust: 100%;
+  /* Prevent adjustments of font size after orientation changes in iOS */
+  word-break: normal;
+  -moz-tab-size: 4;
+  -o-tab-size: 4;
+     tab-size: 4;
+}
+
+*,
+::before,
+::after {
+  background-repeat: no-repeat;
+  /* Set `background-repeat: no-repeat` to all elements and pseudo elements */
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+::before,
+::after {
+  text-decoration: inherit;
+  /* Inherit text-decoration and vertical align to ::before and ::after pseudo elements */
+  vertical-align: inherit;
+}
+
+* {
+  padding: 0;
+  /* Reset `padding` and `margin` of all elements */
+  margin: 0;
+}
+
+/* # =================================================================
+   # General elements
+   # ================================================================= */
+hr {
+  overflow: visible;
+  /* Show the overflow in Edge and IE */
+  height: 0;
+  /* Add the correct box sizing in Firefox */
+  color: inherit;
+  /* Correct border color in Firefox. */
+}
+
+details,
+main {
+  display: block;
+  /* Render the `main` element consistently in IE. */
+}
+
+summary {
+  display: list-item;
+  /* Add the correct display in all browsers */
+}
+
+small {
+  font-size: 80%;
+  /* Set font-size to 80% in `small` elements */
+}
+
+[hidden] {
+  display: none;
+  /* Add the correct display in IE */
+}
+
+abbr[title] {
+  border-bottom: none;
+  /* Remove the bottom border in Chrome 57 */
+  /* Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari */
+  text-decoration: underline;
+  -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted;
+}
+
+a {
+  background-color: transparent;
+  /* Remove the gray background on active links in IE 10 */
+}
+
+a:active,
+a:hover {
+  outline-width: 0;
+  /* Remove the outline when hovering in all browsers */
+}
+
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, monospace;
+  /* Specify the font family of code elements */
+}
+
+pre {
+  font-size: 1em;
+  /* Correct the odd `em` font sizing in all browsers */
+}
+
+b,
+strong {
+  font-weight: bolder;
+  /* Add the correct font weight in Chrome, Edge, and Safari */
+}
+
+/* https://gist.github.com/unruthless/413930 */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+table {
+  border-color: inherit;
+  /* Correct border color in all Chrome, Edge, and Safari. */
+  text-indent: 0;
+  /* Remove text indentation in Chrome, Edge, and Safari */
+}
+
+iframe {
+  border-style: none;
+}
+
+/* # =================================================================
+   # Forms
+   # ================================================================= */
+input {
+  border-radius: 0;
+}
+
+[type=number]::-webkit-inner-spin-button,
+[type=number]::-webkit-outer-spin-button {
+  height: auto;
+  /* Correct the cursor style of increment and decrement buttons in Chrome */
+}
+
+[type=search] {
+  -webkit-appearance: textfield;
+  /* Correct the odd appearance in Chrome and Safari */
+  outline-offset: -2px;
+  /* Correct the outline style in Safari */
+}
+
+[type=search]::-webkit-search-decoration {
+  -webkit-appearance: none;
+  /* Remove the inner padding in Chrome and Safari on macOS */
+}
+
+textarea {
+  overflow: auto;
+  /* Internet Explorer 11+ */
+  resize: vertical;
+  /* Specify textarea resizability */
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  font: inherit;
+  /* Specify font inheritance of form elements */
+}
+
+optgroup {
+  font-weight: bold;
+  /* Restore the font weight unset by the previous rule */
+}
+
+button {
+  overflow: visible;
+  /* Address `overflow` set to `hidden` in IE 8/9/10/11 */
+}
+
+button,
+select {
+  text-transform: none;
+  /* Firefox 40+, Internet Explorer 11- */
+}
+
+/* Apply cursor pointer to button elements */
+button,
+[type=button],
+[type=reset],
+[type=submit],
+[role=button] {
+  cursor: pointer;
+}
+
+/* Remove inner padding and border in Firefox 4+ */
+button::-moz-focus-inner,
+[type=button]::-moz-focus-inner,
+[type=reset]::-moz-focus-inner,
+[type=submit]::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+/* Replace focus style removed in the border reset above */
+button:-moz-focusring,
+[type=button]::-moz-focus-inner,
+[type=reset]::-moz-focus-inner,
+[type=submit]::-moz-focus-inner {
+  outline: 1px dotted ButtonText;
+}
+
+button,
+html [type=button],
+[type=reset],
+[type=submit] {
+  -webkit-appearance: button;
+  /* Correct the inability to style clickable types in iOS */
+}
+
+/* Remove the default button styling in all browsers */
+button,
+input,
+select,
+textarea {
+  background-color: transparent;
+  border-style: none;
+}
+
+a:focus,
+button:focus,
+input:focus,
+select:focus,
+textarea:focus {
+  outline-width: 0;
+}
+
+/* Style select like a standard input */
+select {
+  -moz-appearance: none;
+  /* Firefox 36+ */
+  -webkit-appearance: none;
+  /* Chrome 41+ */
+}
+
+select::-ms-expand {
+  display: none;
+  /* Internet Explorer 11+ */
+}
+
+select::-ms-value {
+  color: currentColor;
+  /* Internet Explorer 11+ */
+}
+
+legend {
+  border: 0;
+  /* Correct `color` not being inherited in IE 8/9/10/11 */
+  color: inherit;
+  /* Correct the color inheritance from `fieldset` elements in IE */
+  display: table;
+  /* Correct the text wrapping in Edge and IE */
+  max-width: 100%;
+  /* Correct the text wrapping in Edge and IE */
+  white-space: normal;
+  /* Correct the text wrapping in Edge and IE */
+  max-width: 100%;
+  /* Correct the text wrapping in Edge 18- and IE */
+}
+
+::-webkit-file-upload-button {
+  /* Correct the inability to style clickable types in iOS and Safari */
+  -webkit-appearance: button;
+  color: inherit;
+  font: inherit;
+  /* Change font properties to `inherit` in Chrome and Safari */
+}
+
+/* Replace pointer cursor in disabled elements */
+[disabled] {
+  cursor: default;
+}
+
+/* # =================================================================
+   # Specify media element style
+   # ================================================================= */
+img {
+  border-style: none;
+  /* Remove border when inside `a` element in IE 8/9/10 */
+}
+
+/* Add the correct vertical alignment in Chrome, Firefox, and Opera */
+progress {
+  vertical-align: baseline;
+}
+
+/* # =================================================================
+   # Accessibility
+   # ================================================================= */
+/* Specify the progress cursor of updating elements */
+[aria-busy=true] {
+  cursor: progress;
+}
+
+/* Specify the pointer cursor of trigger elements */
+[aria-controls] {
+  cursor: pointer;
+}
+
+/* Specify the unstyled cursor of disabled, not-editable, or otherwise inoperable elements */
+[aria-disabled=true] {
+  cursor: default;
+}
+
+*,
+*::after,
+*::before {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px;
+  color: red;
+}
+@media screen and (max-width:767px) {
+  html {
+    scroll-padding-top: 0px;
+  }
+}
+
+body {
+  color: #555555;
+  font-size: 1.6rem;
+  width: 100%;
+  overflow-x: hidden;
+  background-color: #FFFCFA;
+  font-family: "Zen Old Mincho", serif;
+  padding: 0;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  border: none;
+  display: block;
+}
+
+a {
+  color: #555555;
+  text-decoration: none;
+  -webkit-transition: 0.7s;
+  transition: 0.7s;
+}
+a:hover {
+  opacity: 0.8;
+}
+
+li {
+  list-style: none;
+}
+
+.inner {
+  padding: 0 20px;
+  max-width: 1200px;
+}
+
+#fixed-header {
+  position: fixed;
+  top: -110px;
+  width: 100%;
+  height: 80px;
+  line-height: 80px;
+  font-size: 2em;
+  text-align: center;
+  color: #fff;
+  background: #FFFCFA;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-transition: 2s;
+  transition: 2s;
+  z-index: 1000;
+  -webkit-box-shadow: 0px 5px 30px 0px rgba(215, 195, 195, 0.388);
+          box-shadow: 0px 5px 30px 0px rgba(215, 195, 195, 0.388);
+  /* アニメーションタイミング */
+}
+@media screen and (max-width:767px) {
+  #fixed-header {
+    display: none;
+  }
+}
+
+#fixed-header.is-show {
+  top: 0;
+}
+@media screen and (max-width:767px) {
+  #fixed-header.is-show {
+    top: 0;
+  }
+}
+
+.fixed-header__flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 80px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+@media screen and (max-width:767px) {
+  .fixed-header__flex {
+    height: 80px;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+
+.fixed__nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-left: 30px;
+}
+.fixed__nav li {
+  margin-right: 40px;
+  font-size: 1.8rem;
+}
+.fixed__nav li:last-child {
+  margin-right: 0;
+}
+
+.fixed-header__logo img {
+  height: 50px;
+}
+@media screen and (max-width:767px) {
+  .fixed-header__logo img {
+    height: 50px;
+  }
+}
+
+/*==================================================
+スマホ　ナビ
+===================================*/
+#fixed-s-header {
+  display: none;
+}
+@media screen and (max-width:767px) {
+  #fixed-s-header {
+    position: fixed;
+    display: block;
+    background-color: #FFFCFA;
+    font-size: 2rem;
+    right: -100%;
+    z-index: 990;
+    padding: 100px 30px;
+    width: 80%;
+    -webkit-transition: all 1s 0s ease;
+    transition: all 1s 0s ease;
+    border-radius: 0px 0 0 50px;
+  }
+}
+
+#fixed-s-header.active {
+  right: 0px;
+  -webkit-transition: all 1s 0s ease;
+  transition: all 1s 0s ease;
+}
+
+.fixed__s-nav {
+  text-align: left;
+  z-index: 990;
+}
+.fixed__s-nav li {
+  margin-top: 30px;
+}
+.fixed__s-nav li a {
+  color: #555555;
+  display: block;
+  width: 100%;
+}
+
+.nav-back {
+  opacity: 0;
+  -webkit-transition: all 1s 0s ease;
+  transition: all 1s 0s ease;
+}
+
+.nav-back.active {
+  position: fixed;
+  display: block;
+  background-color: rgba(111, 111, 111, 0.4392156863);
+  width: 100vw;
+  height: 100vh;
+  z-index: 900;
+  opacity: 1;
+}
+
+/*==================================================
+　5-2-1 3本線が×に
+===================================*/
+/*ボタン外側※レイアウトによってpositionや形状は適宜変更してください*/
+.openbtn1 {
+  display: none;
+}
+
+@media screen and (max-width:767px) {
+  .openbtn1 {
+    display: block;
+    position: fixed;
+    /*ボタン内側の基点となるためrelativeを指定*/
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
+    right: 10px;
+    top: 10px;
+    z-index: 999;
+  }
+  /*ボタン内側*/
+  .openbtn1 span {
+    display: inline-block;
+    -webkit-transition: all 0.4s;
+    transition: all 0.4s;
+    /*アニメーションの設定*/
+    position: absolute;
+    left: 14px;
+    height: 3px;
+    border-radius: 2px;
+    background: #cfcfcf;
+    width: 45%;
+  }
+  .openbtn1 span:nth-of-type(1) {
+    top: 15px;
+  }
+  .openbtn1 span:nth-of-type(2) {
+    top: 23px;
+  }
+  .openbtn1 span:nth-of-type(3) {
+    top: 31px;
+  }
+  /*activeクラスが付与されると線が回転して×に*/
+  .openbtn1.active span:nth-of-type(1) {
+    top: 18px;
+    left: 18px;
+    -webkit-transform: translateY(6px) rotate(-45deg);
+            transform: translateY(6px) rotate(-45deg);
+    width: 30%;
+  }
+  .openbtn1.active span:nth-of-type(2) {
+    opacity: 0;
+    /*真ん中の線は透過*/
+  }
+  .openbtn1.active span:nth-of-type(3) {
+    top: 30px;
+    left: 18px;
+    -webkit-transform: translateY(-6px) rotate(45deg);
+            transform: translateY(-6px) rotate(45deg);
+    width: 30%;
+  }
+}
+/*--------------------------------------*
+    * layout
+*--------------------------------------*/
+header {
+  height: 120px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+header img {
+  width: 100px;
+  height: 100px;
+}
+
+.l-header__img {
+  height: 100vh;
+  width: 100%;
+}
+
+.l-footer {
+  position: relative;
+  padding: 150px 170px;
+}
+@media screen and (max-width: 1090px) {
+  .l-footer {
+    padding: 150px 10px;
+  }
+}
+@media screen and (max-width:767px) {
+  .l-footer {
+    padding: 0;
+  }
+}
+.l-footer__wave-item {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+.l-footer__wave-item img {
+  width: 100%;
+  height: auto;
+}
+.l-footer__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-bottom: 40px;
+  margin-top: 100px;
+  border-bottom: 1px solid #555555;
+}
+@media screen and (max-width:767px) {
+  .l-footer__list {
+    display: none;
+  }
+}
+.l-footer__list li {
+  margin-right: 54px;
+}
+.l-footer__list li:last-child {
+  margin-right: 0;
+}
+.l-footer__copyright {
+  text-align: left;
+  margin-top: 27px;
+  display: block;
+}
+@media screen and (max-width:767px) {
+  .l-footer__copyright {
+    text-align: center;
+  }
+}
+.l-footer__content {
+  text-align: center;
+}
+@media screen and (max-width:767px) {
+  .l-footer__content {
+    margin-top: 50px;
+  }
+}
+@media screen and (max-width:767px) {
+  .l-footer__content a {
+    display: none;
+  }
+}
+
+header {
+  color: red;
+}
+
+.l-page-header {
+  position: relative;
+}
+.l-page-header__content {
+  text-align: center;
+  padding-bottom: 40px;
+}
+.l-page-header__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 20px;
+}
+.l-page-header__list-item {
+  margin-right: 55px;
+}
+.l-page-header__list-item:last-child {
+  margin-right: 0;
+}
+.l-page-header__logo {
+  width: 226px;
+  margin: 0 auto;
+  padding-top: 40px;
+}
+
+/*==================================================
+　5-2-1 3本線が×に
+===================================*/
+/*ボタン外側※レイアウトによってpositionや形状は適宜変更してください*/
+.openbtn1 {
+  position: relative;
+  /*ボタン内側の基点となるためrelativeを指定*/
+  background: #57a2c7;
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+  border-radius: 5px;
+}
+
+/*ボタン内側*/
+.openbtn1 span {
+  display: inline-block;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+  /*アニメーションの設定*/
+  position: absolute;
+  left: 14px;
+  height: 3px;
+  border-radius: 2px;
+  background: #fff;
+  width: 45%;
+}
+
+.openbtn1 span:nth-of-type(1) {
+  top: 15px;
+}
+
+.openbtn1 span:nth-of-type(2) {
+  top: 23px;
+}
+
+.openbtn1 span:nth-of-type(3) {
+  top: 31px;
+}
+
+/*activeクラスが付与されると線が回転して×に*/
+.openbtn1.active span:nth-of-type(1) {
+  top: 18px;
+  left: 18px;
+  -webkit-transform: translateY(6px) rotate(-45deg);
+          transform: translateY(6px) rotate(-45deg);
+  width: 30%;
+}
+
+.openbtn1.active span:nth-of-type(2) {
+  opacity: 0;
+  /*真ん中の線は透過*/
+}
+
+.openbtn1.active span:nth-of-type(3) {
+  top: 30px;
+  left: 18px;
+  -webkit-transform: translateY(-6px) rotate(45deg);
+          transform: translateY(-6px) rotate(45deg);
+  width: 30%;
+}
+
+/*========= レイアウトのためのCSS ===============*/
+a {
+  color: #333;
+  text-decoration: none;
+}
+
+.lead {
+  margin: 20px 0 0 0;
+}
+
+.btn-block {
+  width: 200px;
+  padding: 30px;
+}
+
+/*--------------------------------------*
+    * object
+*--------------------------------------*/
+/*--------------------------------------*
+    * component
+*--------------------------------------*/
+.c-inner {
+  max-width: 1220px;
+  margin: 0 auto;
+  padding: 10px 30px 30px;
+}
+@media screen and (max-width:767px) {
+  .c-inner {
+    padding: 10px 20px 30px;
+  }
+}
+
+.c-section {
+  padding: 130px 0;
+  text-align: center;
+}
+@media screen and (max-width:767px) {
+  .c-section {
+    padding: 80px 0 40px;
+  }
+}
+.c-section__title {
+  font-size: 4.8rem;
+}
+@media screen and (max-width:767px) {
+  .c-section__title {
+    font-size: 3rem;
+  }
+}
+.c-section__sub-title {
+  display: block;
+  font-size: 2rem;
+  margin-top: 10px;
+}
+
+.c-button {
+  padding: 12px;
+  text-align: center;
+  display: block;
+  font-weight: bold;
+  width: 348px;
+  margin: 30px auto 0;
+  border-radius: 50px;
+  background: #F9F1F5;
+  -webkit-box-shadow: 8px 8px 15px #d4cdd0, -5px -5px 10px #ffffff;
+          box-shadow: 8px 8px 15px #d4cdd0, -5px -5px 10px #ffffff;
+}
+@media screen and (max-width:767px) {
+  .c-button {
+    max-width: 100%;
+  }
+}
+.c-button span {
+  position: relative;
+}
+.c-button:hover {
+  border-radius: 50px;
+  background: #F9F1F5;
+  -webkit-box-shadow: 3px 3px 5px #d4cdd0, -3px -3px 5px #ffffff;
+          box-shadow: 3px 3px 5px #d4cdd0, -3px -3px 5px #ffffff;
+}
+
+.c-button2 {
+  padding: 12px 34px 12px 60px;
+  display: block;
+  font-weight: bold;
+  width: 348px;
+  margin: 40px auto 0;
+  border-radius: 50px;
+  background: #FFFCFA;
+  -webkit-box-shadow: 8px 8px 15px #d9d6d5, -5px -5px 10px #ffffff;
+          box-shadow: 8px 8px 15px #d9d6d5, -5px -5px 10px #ffffff;
+}
+@media screen and (max-width:767px) {
+  .c-button2 {
+    max-width: 100%;
+  }
+}
+.c-button2 span {
+  position: relative;
+}
+.c-button2 span::before {
+  content: "";
+  position: absolute;
+  background-image: url(/wp-content/themes/polite-livingMEI-template/assets/img/arrow.png);
+  background-size: cover;
+  width: 12px;
+  height: 18px;
+  left: -30px;
+  top: 3px;
+}
+.c-button2:hover {
+  border-radius: 50px;
+  background: #FFFCFA;
+  -webkit-box-shadow: 3px 3px 5px #d4cdd0, -3px -3px 5px #ffffff;
+          box-shadow: 3px 3px 5px #d4cdd0, -3px -3px 5px #ffffff;
+}
+
+/* h1見出しのスタイル */
+h1 {
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 20px;
+  margin-top: 50px;
+}
+
+/* フォーム全体のスタイル */
+form {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 5px;
+  font-family: Arial, sans-serif;
+}
+
+/* ラベルのスタイル */
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+/* 入力フィールドとテキストエリアのスタイル */
+input[type=text],
+input[type=email],
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background-color: #FFFCFA;
+}
+
+/* 送信ボタンのスタイル */
+input[type=submit] {
+  background-color: #FFFCFA;
+  color: gray;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+/* 送信ボタンのマウスオーバー時のスタイル */
+input[type=submit]:hover {
+  opacity: 0.8;
+}
+
+@media screen and (max-width:767px) {
+  /* h1見出しのフォントサイズを調整 */
+  h1 {
+    font-size: 20px;
+  }
+  /* フォームの幅を調整 */
+  form {
+    max-width: 100%;
+  }
+  /* 入力フィールドとテキストエリアのフォントサイズを調整 */
+  input[type=text],
+  input[type=email],
+  textarea {
+    font-size: 14px;
+  }
+  /* 送信ボタンのフォントサイズを調整 */
+  input[type=submit] {
+    font-size: 14px;
+  }
+}
+.p-fv {
+  overflow: hidden;
+  position: relative;
+}
+.p-fv__img {
+  position: relative;
+}
+.p-fv img {
+  width: 100%;
+  height: 550px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.ab {
+  position: absolute;
+  width: 100%;
+  height: auto;
+  top: 0;
+}
+.ab img {
+  width: 100%;
+  height: auto;
+}
+
+.bo {
+  position: absolute;
+  width: 100%;
+  height: auto;
+  bottom: 0;
+}
+.bo img {
+  width: 100%;
+  height: auto;
+}
+
+.p-concept {
+  margin-top: 100px;
+}
+.p-concept h2 {
+  background-color: #ea4707;
+  font-size: 10px;
+  padding: 10px;
+  width: 200px;
+  margin-right: auto;
+}
+.p-concept__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.p-concept__text {
+  font-size: 2em;
+}
+.p-concept__left {
+  width: 45%;
+}
+.p-concept__right {
+  width: 55%;
+}
+.p-concept__right img {
+  width: 100%;
+}
+.p-concept__flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 10px;
+  width: calc(100% - 10px);
+}
+.p-concept__flex img {
+  width: 50%;
+}
+.p-concept__flex img:first-child {
+  margin-right: 10px;
+}
+
+.service {
+  background-color: #faf5e1;
+  padding-bottom: 200px;
+}
+
+.p-service__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(30%, 1fr));
+  grid-gap: 15px;
+}
+.p-service__item {
+  background-color: #fff;
+  text-align: center;
+  padding-bottom: 20px;
+}
+.p-service__item h3 {
+  margin-top: 20px;
+}
+.p-service__item p {
+  margin-top: 15px;
+}
+.p-service__item a {
+  margin-top: 15px;
+  display: block;
+}
+
+.p-area__content {
+  position: relative;
+  margin-top: 30px;
+}
+.p-area__content img {
+  display: block;
+  margin: 0 auto;
+  width: 250px;
+  height: 235px;
+}
+.p-area__content p {
+  font-size: 2.7rem;
+}
+@media screen and (max-width:767px) {
+  .p-area__content p {
+    font-size: 2.2rem;
+  }
+}
+.p-area__content::before {
+  content: "";
+  position: absolute;
+  background-image: url(/wp-content/themes/polite-livingMEI-template/assets/img/decoration2.png);
+  background-size: contain;
+  top: -200px;
+  right: 40px;
+  width: 200px;
+  height: 200px;
+}
+@media screen and (max-width:767px) {
+  .p-area__content::before {
+    display: none;
+  }
+}
+.p-area__content::after {
+  content: "";
+  position: absolute;
+  background-image: url(/wp-content/themes/polite-livingMEI-template/assets/img/decoration3.png);
+  background-size: contain;
+  bottom: -60px;
+  left: 40px;
+  width: 200px;
+  height: 200px;
+}
+@media screen and (max-width:767px) {
+  .p-area__content::after {
+    display: none;
+  }
+}
+
+.p-price {
+  background-color: #F9F1F5;
+}
+.p-price__content {
+  margin-top: 100px;
+}
+.p-price__content p {
+  font-size: 3.2rem;
+  margin-bottom: 90px;
+}
+@media screen and (max-width:767px) {
+  .p-price__content p {
+    font-size: 2.2rem;
+  }
+}
+
+.p-profile__flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 100px;
+}
+@media screen and (max-width:767px) {
+  .p-profile__flex {
+    display: block;
+  }
+}
+.p-profile__img {
+  width: 50%;
+  max-width: 350px;
+}
+@media screen and (max-width:767px) {
+  .p-profile__img {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+.p-profile__img img {
+  width: 100%;
+  max-width: 350px;
+  display: block;
+  margin: 0 auto;
+}
+.p-profile__content {
+  width: 50%;
+  max-width: 426px;
+  margin-left: 75px;
+}
+@media screen and (max-width:767px) {
+  .p-profile__content {
+    width: 100%;
+    margin-left: 0;
+    max-width: 100%;
+  }
+}
+.p-profile__content-name {
+  font-size: 2.4rem;
+  font-weight: bold;
+  text-align: left;
+}
+.p-profile__content-name p {
+  margin-top: 10px;
+}
+.p-profile__content-info {
+  margin-top: 14px;
+  text-align: left;
+  line-height: 4rem;
+  font-size: 2rem;
+}
+
+.p-contact {
+  background-color: #F9F1F5;
+}
+.p-contact__content {
+  margin-top: 100px;
+}
+@media screen and (max-width:767px) {
+  .p-contact__content {
+    margin-top: 50px;
+  }
+}
+.p-contact__content p {
+  margin-bottom: 42px;
+}
+
+.p-contact.c-section {
+  padding-bottom: 0;
+}
+@media screen and (max-width:767px) {
+  .p-contact.c-section {
+    padding-bottom: 50px;
+  }
+}
+
+.pickup {
+  background-color: #4cc1f4;
+  padding: 100px 0;
+}
+
+.p-pickup__wrapper {
+  border-radius: 20px;
+  background-image: url(../IMG/header_img.jpg);
+  background-size: cover;
+  background-position: center center;
+  padding: 100px;
+}
+.p-pickup__wrapper p {
+  width: 40%;
+  font-size: 3em;
+  color: white;
+}
+.p-pickup__wrapper a {
+  background-color: white;
+  padding: 20px;
+  border-radius: 30px;
+  display: inline-block;
+  margin-top: 50px;
+}
+
+.news {
+  padding: 100px 0;
+}
+
+.p-news__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 10px;
+}
+
+.p-news__left {
+  width: 60%;
+  margin-right: 20px;
+}
+.p-news__left ul {
+  border-top: 1px solid black;
+}
+.p-news__right {
+  width: 40%;
+}
+.p-news__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 20px 10px;
+}
+.p-news__item:nth-child(2n) {
+  background-color: gray;
+}
+
+.table {
+  width: 60%;
+  border-top: solid 2px #555555;
+  border-bottom: solid 2px #555555;
+  border-collapse: collapse;
+  background: #fff;
+  font-size: 2rem;
+  margin: 0 auto;
+}
+@media screen and (max-width:767px) {
+  .table {
+    width: 100%;
+    font-size: 1.7rem;
+    margin-bottom: 40px;
+  }
+}
+
+.disPC {
+  display: inline-table;
+}
+
+.disSP {
+  display: none;
+}
+
+.fee {
+  -moz-text-align-last: left;
+       text-align-last: left;
+  width: 60%;
+  margin: 10px auto 0;
+}
+@media screen and (max-width:767px) {
+  .fee {
+    width: 100%;
+    margin: 0 auto;
+    text-align: left;
+  }
+}
+
+table,
+td,
+th {
+  border: 1px solid #595959;
+  border-collapse: collapse;
+}
+
+td,
+th {
+  padding: 18px 0px;
+}
+
+td:first-child {
+  background-color: #fff7f7;
+}
+
+th {
+  background: #f0e6cc;
+}
+
+.even {
+  background: #fbf8f0;
+}
+
+.odd {
+  background: #fefcf9;
+}
+
+.table_title {
+  display: none;
+}
+
+@media screen and (max-width:767px) {
+  .table_title {
+    display: block;
+    font-size: 2rem;
+    text-align: left;
+    width: 100%;
+    margin-bottom: 15px;
+  }
+  .disPC {
+    display: none;
+  }
+  .disSP {
+    display: inline-table;
+  }
+}
+.p-page-service {
+  background-color: #F9F1F5;
+}
+.p-page-service__lists {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-top: 100px;
+  margin-bottom: 80px;
+}
+@media screen and (max-width:767px) {
+  .p-page-service__lists {
+    display: block;
+    margin-top: 50px;
+  }
+}
+.p-page-service__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 90%;
+  background-color: #FFFCFA;
+  padding: 80px 30px;
+  border-radius: 30px;
+  -webkit-box-shadow: 5px 10px 15px #d4cdd0;
+          box-shadow: 5px 10px 15px #d4cdd0;
+  margin: 30px auto 0;
+}
+@media screen and (max-width:767px) {
+  .p-page-service__list {
+    width: 100%;
+    margin: 0;
+    max-width: 100%;
+    padding: 40px 10px;
+    margin-bottom: 20px;
+  }
+}
+.p-page-service__list h3 {
+  font-size: 3rem;
+  position: relative;
+}
+.p-page-service__list h3::after {
+  position: absolute;
+  content: "";
+  background-color: #F9F1F5;
+  width: 40%;
+  height: 6px;
+  left: 50%;
+  bottom: -20px;
+  translate: -50%;
+}
+.p-page-service__list h4 {
+  font-size: 2.2rem;
+}
+.p-page-service__list img {
+  margin-top: 40px;
+  width: 30%;
+  margin: 0 auto;
+}
+@media screen and (max-width:767px) {
+  .p-page-service__list img {
+    width: 50%;
+    margin: 30px auto;
+  }
+}
+.p-page-service__list p {
+  margin-top: 40px;
+  margin-bottom: 40px;
+  text-align: left;
+  padding: 0 10px;
+  line-height: 2.5rem;
+  font-size: 2rem;
+}
+@media screen and (max-width:767px) {
+  .p-page-service__list p {
+    margin-top: 0;
+    text-align: center;
+  }
+}
+.p-page-service__button {
+  padding: 6px 32px;
+  width: 90%;
+  display: block;
+  margin: auto auto 0;
+  color: #555555;
+  border: 1px solid #555555;
+  border-radius: 50px;
+  background-color: #FFFCFA;
+}
+@media screen and (max-width:767px) {
+  .p-page-service__button {
+    width: 60%;
+  }
+}
+
+.service-sumple {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+}
+.service-sumple__list {
+  width: 50%;
+  text-align: left;
+  padding: 15px;
+}
+.service-sumple__list img {
+  width: 100%;
+  margin-bottom: 15px;
+}
+@media screen and (max-width:767px) {
+  .service-sumple__list {
+    display: block;
+    width: 100%;
+  }
+}
+
+.service-sumple2__lists {
+  margin-top: 100px;
+}
+.service-sumple2__lists h4 {
+  font-size: 2.2rem;
+}
+
+.service-sumple2__list-items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 100px;
+}
+.service-sumple2__list-items p {
+  font-size: 2rem;
+}
+@media screen and (max-width:767px) {
+  .service-sumple2__list-items {
+    display: inline-block;
+  }
+}
+.service-sumple2__list-item {
+  width: 50%;
+  text-align: center;
+}
+.service-sumple2__list-item p {
+  font-size: 3rem;
+  margin: 0 auto;
+  text-align: center;
+}
+.service-sumple2__list-item img {
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+@media screen and (max-width:767px) {
+  .service-sumple2__list-item {
+    width: 100%;
+  }
+}
+
+.p-page-contact {
+  background-color: #F9F1F5;
+  padding: 100px;
+}
+@media screen and (max-width:767px) {
+  .p-page-contact {
+    padding: 20px;
+  }
+}

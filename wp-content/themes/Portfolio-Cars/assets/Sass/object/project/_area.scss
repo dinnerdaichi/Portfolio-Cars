@@ -1,0 +1,56 @@
+@use "../../foundation/mixin" as m;
+
+
+
+.p-area__content{
+  position: relative;
+  margin-top: 30px;
+
+
+  img{
+    display: block;
+    margin: 0 auto;
+    width: 250px;
+    height: 235px;
+  }
+
+  p{
+    font-size: 2.7rem;
+
+    @include m.mq(sp){
+       font-size: 2.2rem;
+    }
+  }
+
+
+
+    &::before {
+      content: "";
+      position: absolute;
+      background-image: url(/wp-content/themes/polite-livingMEI-template/assets/img/decoration2.png);
+      background-size: contain;
+      top: -200px;
+      right: 40px;
+      width: 200px;
+      height: 200px;
+
+
+      @include m.mq(sp){
+            display: none;
+      }
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      background-image: url(/wp-content/themes/polite-livingMEI-template/assets/img/decoration3.png);
+      background-size: contain;
+      bottom: -60px;
+      left: 40px;
+      width: 200px;
+      height: 200px;
+
+      @include m.mq(sp){
+        display: none;
+      }
+    }
+}

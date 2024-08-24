@@ -1,0 +1,188 @@
+@use "../../foundation/variable" as v;
+@use "../../foundation/mixin" as m;
+
+.p-page-service {
+
+  background-color: v.$color-pink;
+
+
+  &__lists {
+
+    display: flex;
+    flex-direction: column;
+    margin-top: 100px;
+    margin-bottom: 80px;
+
+    @include m.mq(sp) {
+      display: block;
+      margin-top: 50px;
+    }
+
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    background-color: v.$color-base;
+    padding: 80px 30px;
+    border-radius: 30px;
+    box-shadow: 5px 10px 15px #d4cdd0;
+    margin: 30px auto 0;
+
+    @include m.mq(sp) {
+      width: 100%;
+      margin: 0;
+      max-width: 100%;
+      padding: 40px 10px;
+      margin-bottom: 20px;
+    }
+
+    h3 {
+      font-size: 3rem;
+      position: relative;
+
+      &::after {
+        position: absolute;
+        content: "";
+        background-color: v.$color-pink;
+        width: 40%;
+        height: 6px;
+        left: 50%;
+        bottom: -20px;
+        translate: -50%;
+
+
+      }
+
+    }
+
+    h4{
+      font-size: 2.2rem;
+    }
+
+    img {
+      margin-top: 40px;
+      width: 30%;
+      margin: 0 auto;
+
+      @include m.mq(sp) {
+        width: 50%;
+        margin: 30px auto;
+      }
+    }
+
+    p {
+      margin-top: 40px;
+      margin-bottom: 40px;
+      text-align: left;
+      padding: 0 10px;
+      line-height: 2.5rem;
+      font-size: 2rem;
+
+      @include m.mq(sp) {
+        margin-top: 0;
+        text-align: center;
+      }
+    }
+
+
+  }
+
+  &__button {
+    padding: 6px 32px;
+    width: 90%;
+    display: block;
+    margin: auto auto 0;
+    color: v.$color-black;
+    border: 1px solid v.$color-black;
+    border-radius: 50px;
+    background-color: v.$color-base;
+
+
+    @include m.mq(sp) {
+      width: 60%;
+    }
+  }
+
+
+}
+
+// 家事代行
+.service-sumple {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: baseline;
+
+
+  &__list {
+    width: 50%;
+    text-align: left;
+    padding: 15px;
+
+    img {
+      width: 100%;
+      margin-bottom: 15px;
+    }
+
+
+    @include m.mq(sp){
+       display: block;
+       width: 100%;
+    }
+
+  }
+}
+
+
+// 整理整頓
+.service-sumple2__lists{
+  margin-top: 100px;
+
+  h4{
+    font-size: 2.2rem;
+  }
+}
+.service-sumple2__list{
+
+
+
+&-items{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 100px;
+
+  p{
+    font-size: 2rem;
+  }
+
+  @include m.mq(sp){
+     display: inline-block;
+  }
+}
+
+&-item{
+  width: 50%;
+  text-align: center;
+
+  p{
+    font-size: 3rem;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  img{
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+
+  @include m.mq(sp){
+     width: 100%;
+  }
+}
+
+}

@@ -1,0 +1,64 @@
+.p-fv {
+  // background-image: url(/wp-content/themes/polite-livingMEI-template/assets/img/mv.jpg);
+  // background-size: cover;
+  overflow: hidden;
+  position: relative;
+
+
+
+  // &::before {
+  //   content: "";
+  //   background-image: url(/wp-content/themes/polite-livingMEI-template/assets/img/head-after.png);
+  //   background-size: contain;
+  //   position: absolute;
+  //   top: 0;
+  //   width: 100%;
+  //   height: 100%;
+  //   display: block;
+
+  // }
+
+
+  &__img{
+    position: relative;
+
+
+
+
+  }
+
+
+
+
+
+
+  img {
+    width: 100%;
+    height: 550px;
+    object-fit: cover;
+  }
+}
+
+.ab{
+
+  position: absolute;
+  width: 100%;
+  height: auto;
+  top: 0;
+  img{
+    width: 100%;
+    height: auto;
+  }
+}
+.bo{
+  position: absolute;
+    width: 100%;
+    height: auto;
+    bottom: 0;
+
+  img{
+
+    width: 100%;
+    height: auto;
+  }
+}

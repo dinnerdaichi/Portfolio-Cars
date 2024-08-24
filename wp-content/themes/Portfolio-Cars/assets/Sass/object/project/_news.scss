@@ -1,0 +1,38 @@
+@use "./../../foundation/variable" as v;
+@use "../../foundation/mixin" as m;
+
+
+.news{
+  padding: 100px 0;
+}
+
+.p-news__wrapper{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.p-news {
+
+  &__left{
+    width: 60%;
+    margin-right: 20px;
+
+    ul{
+      border-top: 1px solid black;
+    }
+  }
+  &__right{
+    width: 40%;
+  }
+
+  &__item{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 10px;
+
+    &:nth-child(2n){
+      background-color: gray;
+    }
+  }
+}

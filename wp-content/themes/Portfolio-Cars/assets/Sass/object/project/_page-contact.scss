@@ -1,0 +1,12 @@
+@use "../../foundation/variable" as v;
+@use "../../foundation/mixin" as m;
+
+.p-page-contact{
+  background-color:v.$color-pink ;
+  padding: 100px;
+
+
+  @include m.mq(sp){
+    padding: 20px;
+  }
+}
