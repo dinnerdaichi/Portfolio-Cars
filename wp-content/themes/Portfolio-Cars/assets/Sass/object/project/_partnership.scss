@@ -1,0 +1,21 @@
+@use "./../../foundation/variable" as v;
+@use "../../foundation/mixin" as m;
+
+.partnership{
+  padding: 300px 0;
+}
+
+.p-top-partnership__wrapper{
+  display: flex;
+  justify-content:center;
+
+
+  img{
+    width: 200px;
+    margin-right: 20px;
+
+    &:last-child{
+      margin-right: 0;
+    }
+  }
+}

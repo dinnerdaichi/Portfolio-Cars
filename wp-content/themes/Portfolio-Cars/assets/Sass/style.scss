@@ -13,8 +13,7 @@
 *--------------------------------------*/
 @use "./layout/header";
 @use "./layout/footer";
-@use "./layout/responsive";
-@use "./layout/page-header";
+@use "./layout/main";
 @use "./layout/hamburger";
 
 
@@ -30,6 +29,9 @@
 @use "./object/component/section";
 @use "./object/component/button";
 @use "./object/component/contact-form";
+@use "./object/component/swiper";
+@use "./object/component/point";
+@use "./object/component/tel";
 
 @use "./object/project/fv";
 @use "./object/project/concept";
@@ -40,6 +42,14 @@
 @use "./object/project/contact";
 @use "./object/project/pickup";
 @use "./object/project/news";
+@use "./object/project/map";
+@use "./object/project/partnership";
+@use "./object/project/wagashi";
+@use "./object/project/paint";
+@use "./object/project/roadservice";
+@use "./object/project/insurance";
+@use "./object/project/maintenance";
+@use "./object/project/rental";
 
 @use "./object/project/page-price";
 @use "./object/project/page-service";

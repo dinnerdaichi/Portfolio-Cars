@@ -2,25 +2,55 @@
 
 .c-section{
 
-  padding: 130px 0;
-  text-align: center;
 
-  @include m.mq(sp){
-     padding: 80px 0 40px;
+  &__title-wrap{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
   }
 
-
   &__title{
-    font-size: 4.8rem;
+    text-align: center;
+    h2{
+      font-size: 3em;
+    }
 
-    @include m.mq(sp){
-       font-size: 3rem;
+    span{
+      font-size: 1.5em;
     }
   }
 
-  &__sub-title{
-    display: block;
-    font-size: 2rem;
-    margin-top: 10px;
+  &__title-line{
+background-color: gray;
+height: 3px;
+width: 40%;
+
   }
+
+  &__sub-title{
+    background-color: #63cbbf;
+    padding: 30px;
+  }
+
+  &__mv-img{
+    margin-top: 50px;
+    position: relative;
+    height: 500px;
+
+    img{
+      height: 100%;
+      object-fit: cover;
+      width: 100%;
+    }
+
+    p{
+      position: absolute;
+      top: 50%;
+      left: 0;
+      font-size: 2em;
+      padding: 20px;
+    }
+  }
+
 }

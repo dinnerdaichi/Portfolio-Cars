@@ -1,0 +1,25 @@
+@use "../../foundation/mixin" as m;
+
+
+.swiper-slide{
+
+
+  img{
+    width: 100%;
+    // border-radius: 30px;
+    object-fit: cover;
+    height: 100%;
+
+  }
+}
+
+.swiper {
+  width: 100%;
+  height: 400px;
+  margin-top: 200px;
+}
+
+.swiper .swiper-wrapper {
+  transition-timing-function: linear;
+}
+

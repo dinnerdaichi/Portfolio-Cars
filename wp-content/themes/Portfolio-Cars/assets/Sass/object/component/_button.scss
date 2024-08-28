@@ -1,92 +1,26 @@
 @use "./../../foundation/variable" as v;
 @use "../../foundation/mixin" as m;
 
-.c-button {
 
-  //   background-color: v.$color-button;
-  padding: 12px;
-  text-align: center;
-  display: block;
-  //   border-radius: 30px;
-  //   color: white;
-  font-weight: bold;
-  width: 348px;
-  margin: 30px auto 0;
-
+.c-btn.rental {
+  padding: 40px;
+  background-color: v.$bg-beige;
   border-radius: 50px;
-  background: #F9F1F5;
-  box-shadow: 8px 8px 15px #d4cdd0,
-    -5px -5px 10px #ffffff;
+  margin-top: 100px;
+  border: 1px solid gray;
+  position: relative;
 
-    @include m.mq(sp){
-       max-width: 100%;
-    }
-
-  span {
-    position: relative;
-
-    // &::before {
-    //   content: "";
-    //   position: absolute;
-    //   background-image: url(/wp-content/themes/polite-livingMEI-template/assets/img/arrow.png);
-    //   background-size: cover;
-    //   width: 12px;
-    //   height: 18px;
-    //   left: -30px;
-    //   top: 3px;
-
-    // }
-  }
-
-  &:hover {
-    border-radius: 50px;
-    background: #F9F1F5;
-    box-shadow: 3px 3px 5px #d4cdd0,
-      -3px -3px 5px #ffffff;
-  }
-}
-
-.c-button2 {
-
-  //   background-color: v.$color-button;
-  padding: 12px 34px 12px 60px;
-  display: block;
-  //   border-radius: 30px;
-  //   color: white;
-  font-weight: bold;
-  width: 348px;
-  margin: 40px auto 0;
-
-  border-radius: 50px;
-  background: #FFFCFA;
-  box-shadow: 8px 8px 15px #d9d6d5,
-    -5px -5px 10px #ffffff;
-
-
-    @include m.mq(sp){
-       max-width: 100%;
-    }
-
-  span {
-    position: relative;
-
-    &::before {
-      content: "";
-      position: absolute;
-      background-image: url(/wp-content/themes/polite-livingMEI-template/assets/img/arrow.png);
-      background-size: cover;
-      width: 12px;
-      height: 18px;
-      left: -30px;
-      top: 3px;
-
-    }
-  }
-
-  &:hover {
-    border-radius: 50px;
-    background: #FFFCFA;
-    box-shadow: 3px 3px 5px #d4cdd0,
-      -3px -3px 5px #ffffff;
+  &::after {
+    content: "→";
+    position: absolute;
+    right: 0;
+    top: 0;
+    border-radius: 50%;
+    background-color: #4dc1f4;
+    height: 105px;
+    width: 105px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 }

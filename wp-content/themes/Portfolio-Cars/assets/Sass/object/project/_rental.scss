@@ -1,0 +1,219 @@
+@use "../../foundation/mixin" as m;
+@use "../../foundation/variable" as v;
+
+
+.p-rental {
+
+  background-color: v.$bg-blue;
+
+
+  &__content {
+    padding: 80px 0 150px;
+    font-weight: bold;
+  }
+
+  &__text {
+    font-size: 2em;
+
+  }
+
+  &__sub-text {
+    margin-top: 30px;
+
+  }
+
+  &__reserve {
+    margin-top: 100px;
+    text-align: center;
+
+    h3 {
+      display: inline-block;
+      font-size: 2em;
+      font-weight: bold;
+      padding: 30px;
+    }
+  }
+
+  &__carender {
+    display: flex;
+    justify-content: space-between;
+
+    iframe {
+      width: 45%;
+    }
+  }
+
+}
+
+.p-rental__point {
+  background-color: v.$bg-light_blue;
+  padding: 100px 0 0;
+  margin-top: 100px;
+}
+
+.p-point__more {
+  background-color: white;
+  padding: 50px;
+  margin-top: 100px;
+  border-radius: 100px;
+  position: relative;
+
+}
+
+.p-point__more-text {
+  font-weight: bold;
+  font-size: 1.5em;
+}
+
+span.p-point__more-text {
+  font-weight: bold;
+  font-size: 1.2em;
+  background-color: black;
+  padding: 10px;
+  color: white;
+  display: inline-block;
+  margin: 0 auto;
+  text-align: center;
+  position: absolute;
+
+  top: 0%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+}
+
+
+.p-rental__price {
+
+  margin-top: 100px;
+
+  h3 {
+    display: inline-block;
+    font-size: 2em;
+    font-weight: bold;
+    padding: 30px;
+  }
+}
+
+.p-rental__price-table {
+
+  margin-top: 100px;
+
+  table {
+    width: 100%;
+
+
+    td {
+      text-align: center;
+      font-size: 1.2em;
+      padding: 20px;
+      width: 10%;
+    }
+
+  }
+
+  &_caution {
+
+    margin-top: 5px;
+  }
+
+  &_text {
+    color: red;
+    margin-top: 20px;
+  }
+
+
+}
+
+.p-rental__price-caution {
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid black;
+  margin-top: 50px;
+  padding: 50px;
+  align-items: center;
+  font-weight: bold;
+
+  p {
+    font-size: 2em;
+
+  }
+
+  li {
+    font-size: 1.1em;
+    margin-top: 5px;
+  }
+}
+
+/* ---------------------------------------------------
+ * 割引
+/* ---------------------------------------------------*/
+
+.p-rental__discount {
+  margin-top: 100px;
+  text-align: center;
+
+  h3{
+    display: inline-block;
+    font-size: 2em;
+    font-weight: bold;
+    padding: 30px;
+
+  }
+
+
+  &-list {
+
+    ul {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+
+  &-list_item {
+    width: 24%;
+    margin-right: 10px;
+    border-bottom: 10px solid v.$bg-blue;
+    text-align: center;
+    padding: 0px 0 50px ;
+    font-weight: bold;
+    border-top: 1px solid v.$bg-blue;
+    border-right: 1px solid v.$bg-blue;
+    border-left: 1px solid v.$bg-blue;
+
+    &:nth-child(2n) {
+      border: 1px solid v.$bg-green;
+      border-bottom: 10px solid v.$bg-green;
+
+      & .p-rental__discount-list_head{
+      background-color: v.$bg-green;
+      }
+    }
+
+  }
+
+  &-list_head {
+    background-color: v.$bg-blue;
+    padding: 8px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.2em;
+
+
+  }
+
+  &-list_sub-text {
+    margin-top: 30px;
+
+  }
+
+  &-list_text {
+    margin-top: 20px;
+    color: orangered;
+
+      span {
+        font-size: 2em;
+      }
+  }
+}

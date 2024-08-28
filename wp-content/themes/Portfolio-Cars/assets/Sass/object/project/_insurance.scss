@@ -1,0 +1,107 @@
+@use "../../foundation/mixin" as m;
+
+
+.p-insurance__mv-wrap.inner {
+  background-color: #e1f8f5;
+  margin: 0;
+  width: 100%;
+  max-width: 100%;
+  padding: 100px 100px;
+}
+
+.p-insurance {
+
+  margin-top: 100px;
+
+  &__content {
+    text-align: left;
+    max-width: 1160px;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  &__text {
+    font-size: 2em;
+  }
+
+  &__sub-text {
+    font-size: 1.5em;
+    margin-top: 50px;
+  }
+
+}
+
+
+.p-insurance__point {
+  background-color: #fff;
+  margin-top: 200px;
+}
+
+// パートナー
+
+.p-insurance__patner {
+
+  background-color: #faf5e1;
+  margin-top: 200px;
+  margin-bottom: 300px;
+
+  &-content {
+    border-top: 1px solid #000;
+    border-bottom: 1px solid #000;
+    padding: 100px 0;
+    text-align: center;
+    position: relative;
+
+
+
+    h3 {
+      position: absolute;
+      top: -36px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 1.3em;
+      padding: 20px;
+      border: 1px solid gray;
+      border-radius: 999px;
+      display: inline-block;
+      margin: 0 auto;
+      width: 70%;
+      background-color: #fff;
+    }
+  }
+
+  &-text {
+    font-size: 1.2em;
+    text-align: center;
+    line-height: 2.5em;
+
+  }
+
+
+  &-content:first-child {
+
+    padding-bottom: 150px;
+
+    h3 {
+      font-size: 1.3em;
+      padding: 20px;
+      border: none;
+      border-radius: 0px;
+      width: 20%;
+      background-color: none;
+      background: none;
+
+    top: 20px;
+    }
+  }
+
+
+  &-logo{
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &-img{
+    width: 25%;
+  }
+}

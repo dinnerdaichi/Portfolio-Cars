@@ -1,77 +1,26 @@
 @use "../foundation/variable" as v;
 @use "../foundation/mixin" as m;
 
+footer{
+  height: 200px;
+  background-color: #ea4709;
+  padding: 50px;
+  color: white;
+}
 
 .l-footer{
-position: relative;
-  padding: 150px 170px;
 
-  @media screen and (max-width:1090px){
-    padding:150px 10px;
+  &__wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
 
-  @include m.mq(sp){
-     padding: 0;
+  &__logo{
+    font-size: 3em;
   }
 
-
-  &__wave-item{
-    position: absolute;
-    width: 100%;
-    top: 0;
-    left: 0;
-
-    img{
-      width: 100%;
-      height: auto;
-    }
+  &__info{
+    font-size: 1.5em;
   }
-
-
-&__list{
-  display: flex;
-  justify-content: center;
-  padding-bottom: 40px;
-  margin-top:100px;
-  border-bottom: 1px solid v.$color-black;
-
-@include m.mq(sp){
-   display: none;
-}
-
-  li{
-    margin-right: 54px;
-
-    &:last-child{
-      margin-right: 0;
-    }
-  }
-}
-
-&__copyright{
-  text-align: left;
-  margin-top: 27px;
-  display: block;
-
-@include m.mq(sp){
-   text-align: center;
-}
-}
-
-&__content{
-  text-align: center;
-
-  @include m.mq(sp){
-     margin-top: 50px;
-  }
-
-  a{
-    @include m.mq(sp){
-       display: none;
-    }
-  }
-
-}
-
-
 }
