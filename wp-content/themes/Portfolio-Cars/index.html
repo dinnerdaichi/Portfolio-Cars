@@ -13,40 +13,67 @@
 
   <header class="header">
 
-    <img src="./assets/IMG/camel.png" alt="">
-    <div class="openbtn1"><span></span><span></span><span></span></div>
+  <img src="./assets/IMG/camel.png" alt="">
+  <div class="openbtn1"><span></span><span></span><span></span></div>
+
+  <div class="sp_header">
+    <div class="sp_menu">
+      <ul class="nav_items">
+        <li class="nav_item"><a href="index.html" class="links">l-top-concept</a></li>
+        <li class="nav_item"><a href="page-wagashi.html" class="links">和菓子</a></li>
+        <li class="nav_item"><a href="page-paint.html" class="links">塗装</a></li>
+        <li class="nav_item"><a href="page-maintenance.html" class="links">点検</a></li>
+        <li class="nav_item"><a href="page-rental.html" class="links">キャンピングカー</a></li>
+        <li class="nav_item"><a href="page-roadservice.html" class="links">車両販売</a></li>
+        <li class="hide_btn">→</li>
+      </ul>
+    </div>
+  </div>
 
   </header>
 
 
-  <main>
+  <main class="l-main">
 
-    <div class="l-mv">
-      <img src="./assets/IMG/header_img.jpg" alt="">
+    <div class="l-main__mv">
+      <div class="swiper" id="swiper-mv">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+          <!-- Slides -->
+          <div class="swiper-slide"><img src="./assets/IMG/mv-slide1.jpg" alt=""></div>
+          <div class="swiper-slide"><img src="./assets/IMG/mv-slide2.jpg" alt=""></div>
+          <div class="swiper-slide"><img src="./assets/IMG/mv-slide3.jpg" alt=""></div>
+          <div class="swiper-slide"><img src="./assets/IMG/mv-slide4.jpg" alt=""></div>
+          <div class="swiper-slide"><img src="./assets/IMG/camp5.jpg" alt=""></div>
+          <div class="swiper-slide"><img src="./assets/IMG/camp6.jpg" alt=""></div>
+          ...
+        </div>
+
+      </div>
     </div>
 
-    <section class="concept c-section">
+    <section class="p-top-concept c-section">
       <div class="inner">
 
-        <div class="l-top-concept">
+        <div class="p-top-concept">
           <h2>株式会社daici 経営理念</h2>
 
           <div class="p-top-concept__wrapper">
             <div class="p-top-concept__left">
               <p class="p-top-concept__text">お客様第一に徹し<br>確かな技術と<br>高品質なサービスを<br>提供します </p>
               <ul>
-                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
-                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
-                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
-                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
-                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+                <li>Lorem ipsum dolor sit amet  adipisicing elit.</li>
+                <li>Lorem ipsum dolor sit amet  adipisicing elit.</li>
+                <li>Lorem ipsum dolor sit amet  adipisicing elit.</li>
+                <li>Lorem ipsum dolor sit amet  adipisicing elit.</li>
+                <li>Lorem ipsum dolor sit amet  adipisicing elit.</li>
               </ul>
             </div>
             <div class="p-top-concept__right">
-              <img src="./assets/IMG/header_img.jpg" alt="">
+              <img src="./assets/IMG/maintenance01.jpg" alt="">
               <div class="p-top-concept__flex">
-                <img src="./assets/IMG/header_img.jpg" alt="">
-                <img src="./assets/IMG/header_img.jpg" alt="">
+                <img src="./assets/IMG/maintenance02.jpg" alt="">
+                <img src="./assets/IMG/maintenance03.jpg" alt="">
               </div>
             </div>
           </div>
@@ -58,56 +85,72 @@
     </section>
 
 
-    <section class="service c-section">
+    <section class="p-top-service c-section">
       <div class="inner">
 
-        <div class="p-top-service__title-wrapper">
-          <div class="p-top-service__title-line"></div>
+        <div class="p-top-service__titleWrapper">
+          <div class="p-top-service__title line"></div>
           <div class="p-top-service__title">サービス紹介<span>SERVICE</span></div>
-          <div class="p-top-service__title-line"></div>
+          <div class="p-top-service__title line"></div>
         </div>
 
         <div class="p-top-service__wrapper">
           <ul class="p-top-service__grid">
 
             <li class="p-top-service__item">
-              <img src="./assets/IMG/header_img.jpg" alt="">
-              <h3>板金・板金</h3>
+              <div class="p-top-service__item-img">
+
+                <img src="./assets/IMG/maintenance01.jpg" alt="">
+              </div>
+              <h3>車検</h3>
               <p>Lorem, ipsum dolor sit amet </p>
               <a href="">VIEW →</a>
             </li>
 
             <li class="p-top-service__item">
-              <img src="./assets/IMG/header_img.jpg" alt="">
-              <h3>板金・板金</h3>
+              <div class="p-top-service__item-img">
+                <img src="./assets/IMG/paint01.jpeg" alt="">
+              </div>
+              <h3>板金・塗装</h3>
               <p>Lorem, ipsum dolor sit amet </p>
               <a href="">VIEW →</a>
             </li>
 
             <li class="p-top-service__item">
-              <img src="./assets/IMG/header_img.jpg" alt="">
-              <h3>板金・板金</h3>
+              <div class="p-top-service__item-img">
+
+                <img src="./assets/IMG/carsale01.jpg" alt="">
+              </div>
+              <h3>車両販売</h3>
               <p>Lorem, ipsum dolor sit amet </p>
               <a href="">VIEW →</a>
             </li>
 
             <li class="p-top-service__item">
-              <img src="./assets/IMG/header_img.jpg" alt="">
-              <h3>板金・板金</h3>
+              <div class="p-top-service__item-img">
+
+                <img src="./assets/IMG/insurance01.jpg" alt="">
+              </div>
+              <h3>保険</h3>
               <p>Lorem, ipsum dolor sit amet </p>
               <a href="">VIEW →</a>
             </li>
 
             <li class="p-top-service__item">
-              <img src="./assets/IMG/header_img.jpg" alt="">
-              <h3>板金・板金</h3>
+              <div class="p-top-service__item-img">
+                <img src="./assets/IMG/roadservice01.jpg" alt="">
+              </div>
+              <h3>ロードサービス</h3>
               <p>Lorem, ipsum dolor sit amet </p>
               <a href="">VIEW →</a>
             </li>
 
             <li class="p-top-service__item">
-              <img src="./assets/IMG/header_img.jpg" alt="">
-              <h3>板金・板金</h3>
+              <div class="p-top-service__item-img">
+
+                <img src="./assets/IMG/wagashi01.jpg" alt="">
+              </div>
+              <h3>和菓子</h3>
               <p>Lorem, ipsum dolor sit amet </p>
               <a href="">VIEW →</a>
             </li>
@@ -120,18 +163,18 @@
 
 
 
-    <section class="pickup c-section">
+    <section class="p-top-pickup c-section">
       <div class="inner">
         <div class="p-top-pickup__wrapper">
           <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rerum facilis at </p>
-          <a href="">キャンピングカーレンタル</a>
+          <a href="page-rental.html">キャンピングカーレンタル</a>
 
         </div>
 
     </section>
 
 
-    <section class="news c-section">
+    <section class="p-top-news c-section">
       <div class="inner">
 
         <h3>NEWS</h3>
@@ -173,7 +216,7 @@
           </div>
           <div class="p-top-news__right">
             <div class="p-top-news__youtube">
-              <img src="./assets/IMG/header_img.jpg" alt="">
+              <iframe width="" height="400" src="https://www.youtube.com/embed/mKci2gErqJo?si=rzDZewuibu0z6qkx" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             </div>
           </div>
 
@@ -184,15 +227,16 @@
 
 
     <!-- Slider main container -->
-    <div class="swiper">
+    <div class="swiper" id="swiper2">
       <!-- Additional required wrapper -->
       <div class="swiper-wrapper">
         <!-- Slides -->
-        <div class="swiper-slide"><img src="./assets/IMG/header_img.jpg" alt=""></div>
-        <div class="swiper-slide"><img src="./assets/IMG/header_img.jpg" alt=""></div>
-        <div class="swiper-slide"><img src="./assets/IMG/header_img.jpg" alt=""></div>
-        <div class="swiper-slide"><img src="./assets/IMG/header_img.jpg" alt=""></div>
-        <div class="swiper-slide"><img src="./assets/IMG/header_img.jpg" alt=""></div>
+        <div class="swiper-slide"><img src="./assets/IMG/camp1.jpg" alt=""></div>
+        <div class="swiper-slide"><img src="./assets/IMG/camp2.jpg" alt=""></div>
+        <div class="swiper-slide"><img src="./assets/IMG/camp3.jpg" alt=""></div>
+        <div class="swiper-slide"><img src="./assets/IMG/camp4.jpg" alt=""></div>
+        <div class="swiper-slide"><img src="./assets/IMG/camp5.jpg" alt=""></div>
+        <div class="swiper-slide"><img src="./assets/IMG/camp6.jpg" alt=""></div>
         ...
       </div>
 
@@ -223,13 +267,13 @@
     </section>
 
 
-    <section class="partnership c-section">
+    <section class="p-top-partnership c-section">
       <div class="inner">
         <div class="p-top-partnership__wrapper">
-          <img src="./assets/IMG/header_img.jpg" alt="">
-          <img src="./assets/IMG/header_img.jpg" alt="">
-          <img src="./assets/IMG/header_img.jpg" alt="">
-          <img src="./assets/IMG/header_img.jpg" alt="">
+          <img src="./assets/IMG/car-logo.jpeg" alt="">
+          <img src="./assets/IMG/car-logo02.jpeg" alt="">
+          <img src="./assets/IMG/car-logo03.png" alt="">
+          <img src="./assets/IMG/car-logo04.jpeg" alt="">
         </div>
       </div>
     </section>
@@ -249,7 +293,7 @@
 
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script>
-    const swiper = new Swiper('.swiper', {
+    const swiper2 = new Swiper('#swiper2', {
       // Optional parameters
       loop: true,
       spaceBetween: 20,
@@ -279,6 +323,24 @@
       // },
     });
   </script>
+  <script>
+    const swiperMv = new Swiper('#swiper-mv', {
+      // Optional parameters
+      loop: true,
+       effect: "fade",
+      speed: 3000,
+      autoplay: { // 自動再生
+        delay: 3000, // 1秒後に次のスライド（初期値：3000）
+        // disableOnInteraction: false, // 矢印をクリックしても自動再生を止めない
+      },
+      slidesPerView: 1,//見せる枚数
+      // centeredSlides: true,//真ん中寄せ
+      // initialSlide: 1,
+
+    });
+  </script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="./assets/JS/script.js"></script>
 
 </body>
 </html>

@@ -3,9 +3,18 @@
 
 
 header{
-  height: 120px;
+height: 120px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
+  position: fixed;
+  background-color: white;
+  width: 100%;
+  z-index: 999;
+  opacity: 0.9;
 
   img{
     width: 100px;

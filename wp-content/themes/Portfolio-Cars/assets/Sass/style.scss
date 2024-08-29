@@ -14,7 +14,8 @@
 @use "./layout/header";
 @use "./layout/footer";
 @use "./layout/main";
-@use "./layout/hamburger";
+@use "./layout/front-page";
+// @use "./layout/hamburger";
 
 
 
@@ -40,10 +41,10 @@
 @use "./object/project/price";
 @use "./object/project/profile";
 @use "./object/project/contact";
-@use "./object/project/pickup";
+// @use "./object/project/pickup";
 @use "./object/project/news";
 @use "./object/project/map";
-@use "./object/project/partnership";
+// @use "./object/project/partnership";
 @use "./object/project/wagashi";
 @use "./object/project/paint";
 @use "./object/project/roadservice";

@@ -8,13 +8,13 @@
   &-tel {
 
     margin-top: 300px;
-    margin-bottom: 500px;
+    // margin-bottom: 500px;
 
 
     h3 {
       position: relative;
       top: -80px;
-      font-size: 1.2em;
+      font-size: 1.2rem;
       background-color: #66dbce;
       display: inline-block;
       padding: 5px;
@@ -34,14 +34,14 @@
   }
 
   &-tel__text {
-    font-size: 2em;
+    font-size: 2rem;
   }
 
   &-tel__number {
-    font-size: 1.5em;
+    font-size: 1.5rem;
 
     span {
-      font-size: 3em;
+      font-size: 3rem;
     }
   }
 }

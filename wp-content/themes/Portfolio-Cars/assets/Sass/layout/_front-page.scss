@@ -1,0 +1,280 @@
+@use "../foundation/variable" as v;
+@use "../foundation/mixin" as m;
+
+
+.l-top-concept {
+
+  h2 {
+
+    font-size: 18px;
+    background-color: v.$bg-orange;
+    display: inline-block;
+  }
+
+}
+
+/* ---------------------------------------------------
+ * コンセプト
+/* ---------------------------------------------------*/
+
+.p-top-concept {
+
+  margin-top: 100px;
+
+  h2{
+    background-color: v.$bg-orange;
+    display: inline-block;
+    color: white;
+    padding: 5px 20px;
+    border-radius: 0px 30px 30px 0 ;
+  }
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px
+  }
+
+  &__left {
+    width: 50%;
+
+    ul {
+      margin-top: 40px;
+
+      li {
+        margin-top: 10px;
+      }
+    }
+  }
+
+  &__text {
+    font-size: 4rem;
+    font-weight: bold;
+    line-height: 5rem;
+    letter-spacing: 9px;
+  }
+
+  &__right {
+    width: 50%;
+  }
+
+  &__flex {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5px;
+    width: calc(100% - 5px);
+
+    img {
+      width: 50%;
+
+      &:first-child {
+        margin-right: 5px;
+      }
+    }
+
+  }
+
+
+
+
+}
+
+
+/* ---------------------------------------------------
+ * サービス一覧
+/* ---------------------------------------------------*/
+
+
+.p-top-service {
+  margin-top: 100px;
+  background-color: v.$bg-beige;
+  padding: 100px 0;
+
+
+  &__titleWrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__title {
+    font-size: 2.5rem;
+
+    span {
+      display: block;
+      margin: 0 auto;
+      text-align: center;
+      font-size: 1rem;
+      color: v.$bg-blue;
+
+    }
+  }
+
+
+  &__line {}
+}
+
+
+.p-top-service {
+
+  &__wrapper {
+    margin-top: 20px;
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30%, 1fr));
+    grid-gap: 15px
+  }
+
+  &__item {
+    text-align: center;
+    background-color: white;
+    padding-bottom: 30px;
+    margin-top: 30px;
+    border-bottom: 8px solid v.$bg-blue;
+
+    &:nth-child(2n) {
+      border-bottom: 8px solid v.$bg-green;
+
+    }
+
+    &-img {
+      height: 300px;
+
+      img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+      }
+    }
+
+
+    h3 {
+      margin-top: 20px;
+    }
+
+    p {
+      margin-top: 15px;
+    }
+
+    a {
+      margin-top: 20px;
+      display: block;
+    }
+  }
+
+}
+
+/* ---------------------------------------------------
+ * ピックップ
+/* ---------------------------------------------------*/
+
+.p-top-pickup {
+
+  background-color: #4cc1f4;
+  padding: 100px 0;
+
+
+  &__wrapper {
+    border-radius: 20px;
+    background-image: url(../IMG/rental01.jpg);
+    background-size: cover;
+    background-position: center center;
+
+    padding: 100px;
+
+    p {
+      width: 40%;
+      font-size: 3rem;
+      color: white;
+    }
+
+    a {
+      background-color: white;
+      padding: 20px;
+      border-radius: 30px;
+      display: inline-block;
+      margin-top: 50px;
+    }
+  }
+
+}
+
+
+/* ---------------------------------------------------
+ * NEWS
+/* ---------------------------------------------------*/
+
+
+.p-top-news {
+  margin-top: 100px;
+
+  h3 {
+    text-align: center;
+    margin: 0 auto;
+    font-size: 2.5rem;
+  }
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px
+  }
+
+  &__left {
+    width: 60%;
+    margin-right: 20px;
+
+    ul {
+      border-top: 1px solid v.$bg-beige;
+    }
+  }
+
+  &__right {
+    width: 40%;
+    height: 100%;
+  }
+
+  &__item {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 10px;
+
+    &:nth-child(2n) {
+      background-color: v.$bg-beige;
+    }
+  }
+
+  &__youtube {
+
+    iframe {
+      width: 100%;
+    }
+  }
+}
+
+/* ---------------------------------------------------
+ * Partner
+/* ---------------------------------------------------*/
+
+.p-top-partnership {
+  margin-top: 300px;
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+
+    img {
+      width: 200px;
+      margin-right: 20px;
+      height: 100%;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+
+}

@@ -10,7 +10,7 @@
 
 .p-wagashi {
 
-  margin-top: 100px;
+  // margin-top: 100px;
 
   &__content {
     text-align: left;
@@ -20,11 +20,11 @@
   }
 
   &__text {
-    font-size: 2em;
+    font-size: 2rem;
   }
 
   &__sub-text {
-    font-size: 1.5em;
+    font-size: 1.5rem;
     margin-top: 50px;
   }
 
@@ -57,11 +57,19 @@
       border-bottom: 1px solid #67dbce;
       text-align: center;
       padding-bottom: 25px;
+      height: 300px;
 
       p {
         margin-top: 25px;
       }
     }
+  }
+
+  &__item-img{
+    width: 100%;
+    height: 80%;
+    object-fit: cover;
+          box-shadow: 1px 1px 5px gray;
   }
 
   &__info {
@@ -76,11 +84,11 @@
     }
 
     &-logo{
-      font-size: 2em;
+      font-size: 2rem;
     }
 
     &-text{
-      font-size: 1.5em;
+      font-size: 1.5rem;
     }
 
   }
