@@ -3,11 +3,15 @@
 
 .c-point {
 
-  margin-top: 100px;
+  margin-top: 130px;
 
   &__title {
     font-size: 2.5rem;
     text-align: center;
+
+    @include m.mq(sp){
+       font-size: 2.2rem;
+    }
   }
 
   &__item {
@@ -17,6 +21,10 @@
 
       display: flex;
       justify-content: space-between;
+
+      @include m.mq(sp){
+         display: block;
+      }
     }
 
 
@@ -28,6 +36,17 @@
     margin-right: 25px;
     width: 30%;
 
+    @include m.mq(sp){
+       width: 100%;
+       margin-top: 50px;
+       margin-right: 0;
+    }
+
+    img{
+      border-radius: 30px;
+      margin-top: 15px;
+    }
+
     &:last-child {
       margin-right: 0;
     }
@@ -37,6 +56,10 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    @include m.mq(sp){
+       justify-content: flex-start;
+    }
   }
 
     &__item-num{
@@ -47,6 +70,13 @@
       padding-top: 25%;
       font-weight: bold;
       font-style: oblique;
+
+
+      @include m.mq(sp){
+         width: 18%;
+         padding-top: 18%;
+         margin-right: 10px;
+      }
 
       p{
         position: absolute;
@@ -60,6 +90,10 @@
         text-align: center;
         font-size: 28px;
         margin-top: -6px;
+
+        @include m.mq(sp){
+           font-size: 18px;
+        }
       }
     }
 
@@ -70,12 +104,21 @@
     font-weight: bold;
     // margin-top: 20px;
     font-size: 1.6rem;
+
+    @include m.mq(sp){
+        font-size: 2rem;
+    }
   }
 
   &__item_text {
     margin-top: 30px;
     font-size: 1.2rem;
     line-height: 2rem;
+
+    @include m.mq(sp){
+       margin-top: 20px;
+       font-size: 1.5rem;
+    }
   }
 
 

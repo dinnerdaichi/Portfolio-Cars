@@ -1,12 +1,54 @@
 @use "../../foundation/variable" as v;
 @use "../../foundation/mixin" as m;
 
-.p-page-contact{
-  background-color:v.$color-pink ;
-  padding: 100px;
+.p-contact__table{
 
+  margin-top: 100px;
 
   @include m.mq(sp){
-    padding: 20px;
+     margin-top: 60px;
   }
+
+
+  table,
+    td,
+    th{
+      border: none;
+    }
+  table{
+    width:70%;
+    margin: 0 auto;
+
+    @include m.mq(sp){
+       width: 100%;
+    }
+
+
+    th{
+      width: 30%;
+      background-color: white;
+      // background-color:#fce4da;
+      margin-right: 20px;
+      text-align: right;
+      padding-right: 10px;
+    }
+
+    tr{
+      // background-color:#fce4da;
+    }
+
+    input{
+      margin-bottom: 0;
+    }
+  }
+}
+
+button{
+  margin: 20px auto;
+  display: block;
+  background-color: v.$bg-orange;
+  padding: 20px;
+  border-radius: 50px;
+  color: white;
+  width: 300px;
 }

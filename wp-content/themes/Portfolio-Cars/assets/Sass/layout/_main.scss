@@ -1,5 +1,14 @@
+@use "../foundation/mixin" as m;
 
 main{
-  padding-bottom: 300px;
-  padding-top: 120px;
+  padding-bottom: 180px;
+  // padding-top: 120px;
+
+  @include m.mq(sp){
+     padding-bottom: 100px;
+  }
+}
+
+main.p-mentenance{
+  padding-bottom: 0;
 }

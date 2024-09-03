@@ -1,54 +1,75 @@
 @use "../../foundation/mixin" as m;
 
-.c-section{
 
-  &__mv{
-    padding-top: 80px;
+
+.c-section {
+
+  &__mv {
+    padding-top: 180px;
+
+    @include m.mq(sp){
+       padding-top: 130px;
+    }
   }
 
 
-  &__title-wrap{
+  &__title-wrap {
     display: flex;
     justify-content: space-between;
     align-items: center;
 
   }
 
-  &__title{
+  &__title {
     text-align: center;
-    h2{
+    width: 50%;
+
+    h2 {
       font-size: 3rem;
+
+
     }
 
-    span{
+    span {
       font-size: 1.5rem;
     }
   }
 
-  &__title-line{
-background-color: gray;
-height: 3px;
-width: 40%;
+  // レンタルページのみ
+  &__title.white {
+    color: white;
+  }
+
+  //
+
+  &__title-line {
+    background-color: gray;
+    height: 3px;
+    width: 40%;
+
+    @include m.mq(sp){
+       width: 15%;
+    }
 
   }
 
-  &__sub-title{
+  &__sub-title {
     background-color: #63cbbf;
     padding: 30px;
   }
 
-  &__mv-img{
+  &__mv-img {
     margin-top: 50px;
     position: relative;
     height: 500px;
 
-    img{
+    img {
       height: 100%;
       object-fit: cover;
       width: 100%;
     }
 
-    p{
+    p {
       position: absolute;
       top: 50%;
       left: 0;
@@ -57,4 +78,49 @@ width: 40%;
     }
   }
 
+
+
+}
+
+.mv-logo {
+  position: absolute;
+  bottom: -44%;
+  left: 72%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  width: 440px;
+  height: 240px;
+  z-index: 999;
+
+  @include m.mq(sp) {
+    width: 270px;
+    height: 160px;
+    bottom: -4%;
+      left: 60%;
+  }
+
+
+  img {
+    width: 100%;
+  }
+}
+
+.l-main__mv .mv-logo {
+  left: 50%;
+  width: 60%;
+  height: auto;
+  max-width: 600px;
+  bottom: 10%;
+
+  @include m.mq(sp) {
+    left: 40%;
+  }
+}
+
+.p-general .c-section__mv {
+  padding-top: 100px;
+}
+
+.p-check .c-section__mv {
+  padding-top: 100px;
 }

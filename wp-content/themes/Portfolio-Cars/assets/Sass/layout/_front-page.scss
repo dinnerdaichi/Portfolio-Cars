@@ -13,6 +13,11 @@
 
 }
 
+.l-main__mv{
+  position: relative;
+  height: 100vh;
+  // overflow-x: hidden;
+}
 /* ---------------------------------------------------
  * コンセプト
 /* ---------------------------------------------------*/
@@ -21,22 +26,32 @@
 
   margin-top: 100px;
 
-  h2{
+  h2 {
     background-color: v.$bg-orange;
     display: inline-block;
     color: white;
     padding: 5px 20px;
-    border-radius: 0px 30px 30px 0 ;
+    border-radius: 0px 30px 30px 0;
   }
 
   &__wrapper {
     display: flex;
     justify-content: space-between;
-    margin-top: 50px
+    margin-top: 50px;
+
+    @include m.mq(sp){
+      display: block;
+
+
+    }
   }
 
   &__left {
     width: 50%;
+
+    @include m.mq(sp){
+       width: 100%;
+    }
 
     ul {
       margin-top: 40px;
@@ -52,10 +67,24 @@
     font-weight: bold;
     line-height: 5rem;
     letter-spacing: 9px;
+
+    @include m.mq(sp){
+       font-size: 3rem;
+       letter-spacing: 3px;
+    }
   }
 
   &__right {
     width: 50%;
+
+    @include m.mq(sp){
+       width: 100%;
+       margin-top: 10px;
+    }
+
+    img {
+      border-radius: 30px;
+    }
   }
 
   &__flex {
@@ -90,6 +119,12 @@
   background-color: v.$bg-beige;
   padding: 100px 0;
 
+  @include m.mq(sp){
+
+    margin-top: 50px;
+    padding: 50px 0 ;
+  }
+
 
   &__titleWrapper {
     display: flex;
@@ -97,7 +132,8 @@
   }
 
   &__title {
-    font-size: 2.5rem;
+    font-size: 6.5rem;
+    font-weight: bold;
 
     span {
       display: block;
@@ -117,13 +153,18 @@
 .p-top-service {
 
   &__wrapper {
-    margin-top: 20px;
+    margin-top: 50px;
   }
 
   &__grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(30%, 1fr));
-    grid-gap: 15px
+    grid-gap: 25px;
+
+    @include m.mq(sp){
+      grid-template-columns: none;
+
+    }
   }
 
   &__item {
@@ -132,6 +173,13 @@
     padding-bottom: 30px;
     margin-top: 30px;
     border-bottom: 8px solid v.$bg-blue;
+    border-radius: 30px;
+    width: 90%;
+    margin: 0 auto;
+
+    @include m.mq(sp){
+       width: 100%;
+    }
 
     &:nth-child(2n) {
       border-bottom: 8px solid v.$bg-green;
@@ -140,11 +188,27 @@
 
     &-img {
       height: 300px;
+      overflow: hidden;
+      border-radius: 30px 30px 0 0;
+
+      &:hover {
+
+
+        img {
+          transform: scale(1.1);
+          border-radius: 10px 10px 0 0;
+          /* 拡大 */
+        }
+      }
 
       img {
         height: 100%;
         width: 100%;
         object-fit: cover;
+        transition: transform .6s ease;
+        border-radius: 10px 10px 0 0;
+
+
       }
     }
 
@@ -158,8 +222,18 @@
     }
 
     a {
-      margin-top: 20px;
+      // margin-top: 20px;
       display: block;
+
+      &:hover {
+
+
+        img {
+          transform: scale(1.1);
+          border-radius: 10px 10px 0 0;
+          /* 拡大 */
+        }
+      }
     }
   }
 
@@ -177,11 +251,17 @@
 
   &__wrapper {
     border-radius: 20px;
-    background-image: url(../IMG/rental01.jpg);
+    background-image: url(../img/rental01.jpg);
     background-size: cover;
     background-position: center center;
+    border: 6px dashed yellow;
 
     padding: 100px;
+
+    @include m.mq(sp){
+
+      padding: 10px;
+    }
 
     p {
       width: 40%;
@@ -195,6 +275,11 @@
       border-radius: 30px;
       display: inline-block;
       margin-top: 50px;
+
+      @include m.mq(sp){
+         width: 100%;
+         text-align: center;
+      }
     }
   }
 
@@ -212,18 +297,28 @@
   h3 {
     text-align: center;
     margin: 0 auto;
-    font-size: 2.5rem;
+    font-size: 6.5rem;
   }
 
   &__wrapper {
     display: flex;
     justify-content: space-between;
-    margin-top: 50px
+    margin-top: 50px;
+
+    @include m.mq(sp){
+       display: block;
+    }
   }
 
   &__left {
     width: 60%;
     margin-right: 20px;
+
+    @include m.mq(sp){
+       width: 100%;
+       margin-right: 0;
+       margin-bottom: 10px;
+    }
 
     ul {
       border-top: 1px solid v.$bg-beige;
@@ -233,15 +328,23 @@
   &__right {
     width: 40%;
     height: 100%;
+
+    @include m.mq(sp){
+       width: 100%;
+    }
   }
 
   &__item {
-    display: flex;
-    justify-content: space-between;
     padding: 20px 10px;
 
     &:nth-child(2n) {
       background-color: v.$bg-beige;
+    }
+
+    a{
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
     }
   }
 
@@ -258,16 +361,20 @@
 /* ---------------------------------------------------*/
 
 .p-top-partnership {
-  margin-top: 300px;
+  margin-top: 120px;
+
+  @include m.mq(sp){
+     margin-top: 30px;
+  }
 
   &__wrapper {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
 
 
     img {
-      width: 200px;
+      width: 20%;
       margin-right: 20px;
       height: 100%;
 
@@ -277,4 +384,95 @@
     }
   }
 
+}
+
+/* ---------------------------------------------------
+ * マップ
+/* ---------------------------------------------------*/
+.p-top-map {
+background-color: v.$bg-beige;
+}
+
+.bg-fixed{
+  background-image: url(../img/mv-slide2.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  height: 50vh;
+  width: 100%;
+
+  @include m.mq(sp){
+     background-position: center center;
+  }
+
+}
+
+.bg-fixed.mt-100{
+  margin-top: 100px;
+
+  @include m.mq(sp){
+     margin-top: 50px;
+  }
+}
+
+.p-top-map__wrapper {
+
+  display: flex;
+  justify-content: space-between;
+
+  @include m.mq(sp){
+     display: block;
+     padding-bottom: 30px;
+  }
+}
+
+.p-top-map {
+
+
+
+  &__info {
+    width: 50%;
+    background-color: #faf5e1;
+    padding: 50px 50px 50px 20px;
+
+    @include m.mq(sp){
+       width: 100%
+    }
+
+    h3 {
+      font-size: 2em;
+    }
+  }
+
+  &__google-map {
+    width: 50%;
+
+    @include m.mq(sp){
+       width: 100%;
+    }
+
+    iframe {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__detail {
+    font-size: 1.5em;
+    margin-top: 20px;
+  }
+
+  &__address {
+    font-size: 1.7em;
+    margin-top: 30px;
+  }
+
+  &__tel {
+    font-size: 1.5em;
+    margin-top: 20px;
+  }
+
+  &__time {
+    font-size: 1.5em;
+    margin-top: 20px;
+  }
 }

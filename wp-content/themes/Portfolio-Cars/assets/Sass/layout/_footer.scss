@@ -1,26 +1,30 @@
 @use "../foundation/variable" as v;
 @use "../foundation/mixin" as m;
 
-footer{
+footer {
   height: 200px;
   background-color: #ea4709;
   padding: 50px;
   color: white;
+
+  @include m.mq(sp) {
+    height: auto;
+  }
 }
 
-.l-footer{
+.l-footer {
 
-  &__wrapper{
+  &__wrapper {
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
 
-  &__logo{
+  &__logo {
     font-size: 3rem;
   }
 
-  &__info{
+  &__info {
     font-size: 1.5rem;
   }
 }

@@ -4,7 +4,7 @@
 @use "./foundation/reset";
 @use "./foundation/variable";
 @use "./foundation/base";
-@use "./foundation/js";
+// @use "./foundation/js";
 
 
 
@@ -15,7 +15,7 @@
 @use "./layout/footer";
 @use "./layout/main";
 @use "./layout/front-page";
-// @use "./layout/hamburger";
+@use "./layout/hamburger";
 
 
 
@@ -35,15 +35,15 @@
 @use "./object/component/tel";
 
 @use "./object/project/fv";
-@use "./object/project/concept";
-@use "./object/project/service";
-@use "./object/project/area";
-@use "./object/project/price";
-@use "./object/project/profile";
-@use "./object/project/contact";
+// @use "./object/project/concept";
+// @use "./object/project/service";
+// @use "./object/project/area";
+// @use "./object/project/price";
+// @use "./object/project/profile";
+// @use "./object/project/contact";
 // @use "./object/project/pickup";
 @use "./object/project/news";
-@use "./object/project/map";
+// @use "./object/project/map";
 // @use "./object/project/partnership";
 @use "./object/project/wagashi";
 @use "./object/project/paint";

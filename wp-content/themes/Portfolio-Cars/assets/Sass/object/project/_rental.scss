@@ -10,6 +10,10 @@
   &__content {
     padding: 80px 0 150px;
     font-weight: bold;
+
+    @include m.mq(sp){
+      padding: 80px 0 80px;
+    }
   }
 
   &__text {
@@ -22,15 +26,27 @@
 
   }
 
+  /* ---------------------------------------------------
+   * 予約
+  /* ---------------------------------------------------*/
+
   &__reserve {
     margin-top: 100px;
     text-align: center;
+
+    @include m.mq(sp){
+       margin-top: 50px;
+    }
 
     h3 {
       display: inline-block;
       font-size: 2rem;
       font-weight: bold;
       padding: 30px;
+
+      @include m.mq(sp){
+         padding: 0;
+      }
     }
   }
 
@@ -40,6 +56,15 @@
 
     iframe {
       width: 45%;
+    }
+
+    @include m.mq(sp){
+       display: block;
+
+       iframe{
+        width: 100%;
+        margin-top: 20px;
+       }
     }
   }
 
@@ -57,6 +82,12 @@
   margin-top: 100px;
   border-radius: 100px;
   position: relative;
+
+  @include m.mq(sp){
+     padding: 35px;
+     margin-bottom: 40px;
+     margin-top: 70px;
+  }
 
 }
 
@@ -89,11 +120,18 @@ span.p-point__more-text {
 
   margin-top: 100px;
 
+
   h3 {
-    display: inline-block;
+    // display: inline-block;
     font-size: 2rem;
     font-weight: bold;
     padding: 30px;
+    text-align: center;
+  }
+
+
+  @include m.mq(sp){
+     margin-top: 30px;
   }
 }
 
@@ -135,16 +173,28 @@ span.p-point__more-text {
   padding: 50px;
   align-items: center;
   font-weight: bold;
+    border-radius: 30px;
 
   p {
     font-size: 2rem;
     margin-right: 100px;
+
+    @include m.mq(sp){
+       margin-right: 0;
+       text-align: center;
+    }
 
   }
 
   li {
     font-size: 1.1rem;
     margin-top: 5px;
+  }
+
+  @include m.mq(sp){
+     display: block;
+     padding: 30px;
+     margin-top: 0;
   }
 }
 
@@ -155,6 +205,10 @@ span.p-point__more-text {
 .p-rental__discount {
   margin-top: 100px;
   text-align: center;
+
+  @include m.mq(sp){
+     margin-top: 50px;
+  }
 
   h3{
     display: inline-block;
@@ -171,6 +225,10 @@ span.p-point__more-text {
       display: flex;
       justify-content: space-between;
       align-items: center;
+
+      @include m.mq(sp){
+         display: block;
+      }
     }
   }
 
@@ -184,6 +242,7 @@ span.p-point__more-text {
     border-top: 1px solid v.$bg-blue;
     border-right: 1px solid v.$bg-blue;
     border-left: 1px solid v.$bg-blue;
+    border-radius: 10px;
 
     &:nth-child(2n) {
       border: 1px solid v.$bg-green;
@@ -194,6 +253,13 @@ span.p-point__more-text {
       }
     }
 
+    @include m.mq(sp){
+       width: 100%;
+       margin-right: 0;
+       margin-top: 20px;
+       padding: 0 0 30px;
+    }
+
   }
 
   &-list_head {
@@ -202,12 +268,17 @@ span.p-point__more-text {
     text-align: center;
     font-weight: bold;
     font-size: 1.2rem;
+    border-radius: 10px 10px 0 0 ;
 
 
   }
 
   &-list_sub-text {
     margin-top: 30px;
+
+    @include m.mq(sp){
+       font-size: 2rem;
+    }
 
   }
 
@@ -216,7 +287,8 @@ span.p-point__more-text {
     color: orangered;
 
       span {
-        font-size: 2rem;
+        font-size: 6rem;
+        margin-top: 0;
       }
   }
 }

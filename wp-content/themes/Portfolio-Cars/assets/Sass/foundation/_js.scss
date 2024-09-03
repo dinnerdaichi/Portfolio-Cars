@@ -1,82 +1,82 @@
 @use './variable' as v;
 @use "../foundation/mixin" as m;
 
-#fixed-header {
-  position: fixed;
-  top: -110px;
-  width: 100%;
-  height: 80px;
-  line-height: 80px;
-  font-size: 2rem;
-  text-align: center;
-  color: #fff;
-  background: v.$color-base;
-  box-sizing: border-box;
-  transition: 2s;
-  z-index: 1000;
-  box-shadow: 0px 5px 30px 0px rgba(215, 195, 195, 0.388);
+// #fixed-header {
+//   position: fixed;
+//   top: -110px;
+//   width: 100%;
+//   height: 80px;
+//   line-height: 80px;
+//   font-size: 2rem;
+//   text-align: center;
+//   color: #fff;
+//   background: v.$color-base;
+//   box-sizing: border-box;
+//   transition: 2s;
+//   z-index: 1000;
+//   box-shadow: 0px 5px 30px 0px rgba(215, 195, 195, 0.388);
 
-  /* アニメーションタイミング */
+//   /* アニメーションタイミング */
 
-  @include m.mq(sp) {
-    display: none;
+//   @include m.mq(sp) {
+//     display: none;
 
-  }
-}
-
-
-
-#fixed-header.is-show {
-  top: 0;
-
-  @include m.mq(sp) {
-    top: 0;
-  }
-}
+//   }
+// }
 
 
-.fixed-header__flex {
-  display: flex;
-  justify-content: center;
-  height: 80px;
-  align-items: center;
+
+// #fixed-header.is-show {
+//   top: 0;
+
+//   @include m.mq(sp) {
+//     top: 0;
+//   }
+// }
 
 
-  @include m.mq(sp) {
-    height: 80px;
-    justify-content: space-between;
-  }
-
-}
-
-.fixed__nav {
-  display: flex;
-  justify-content: center;
-  margin-left: 30px;
-
-  @include m.mq(sp) {}
+// .fixed-header__flex {
+//   display: flex;
+//   justify-content: center;
+//   height: 80px;
+//   align-items: center;
 
 
-  li {
-    margin-right: 40px;
-    font-size: 1.8rem;
+//   @include m.mq(sp) {
+//     height: 80px;
+//     justify-content: space-between;
+//   }
 
-    &:last-child {
-      margin-right: 0;
-    }
-  }
-}
+// }
 
-.fixed-header__logo {
+// .fixed__nav {
+//   display: flex;
+//   justify-content: center;
+//   margin-left: 30px;
 
-  img {
-    height: 50px;
+//   @include m.mq(sp) {}
 
-    @include m.mq(sp) {
-      height: 50px;
-    }
-  }
-}
+
+//   li {
+//     margin-right: 40px;
+//     font-size: 1.8rem;
+
+//     &:last-child {
+//       margin-right: 0;
+//     }
+//   }
+// }
+
+// .fixed-header__logo {
+
+//   img {
+//     height: 50px;
+
+//     @include m.mq(sp) {
+//       height: 50px;
+//     }
+//   }
+// }
 
 /*==================================================
 スマホ　ナビ
@@ -94,11 +94,17 @@
   width: 30%;
   transition: all 1s 0s ease;
   border-radius: 0px 0 0 50px;
+  height: 100%;
+
+  @include m.mq(sp){
+     width: 60%;
+  }
 }
 
 .sp_header.active {
   right: 0px;
   transition: all 0.5s 0s ease;
+  top: 0;
 }
 
 .fixed__s-nav {
@@ -133,6 +139,22 @@
 }
 
 
+.nav_item{
+  margin-top: 20px;
+
+  a{
+    display: block;
+    font-size: 3rem;
+    width: 100%;
+
+    span{
+      display: block;
+      margin: 0 auto;
+      font-size: 10px;
+    }
+  }
+}
+
 
 
 
@@ -144,40 +166,21 @@
 .openbtn1 {
   display: block;
   position: fixed;
-  /*ボタン内側の基点となるためrelativeを指定*/
   cursor: pointer;
   width: 50px;
-  height: 50px;
+  height: 100px;
   border-radius: 5px;
-  right: 10px;
-  top: 10px;
+  right: 40px;
+  top: 55px;
   z-index: 999;
-}
 
-.openbtn1 span {
-  display: inline-block;
-  transition: all .4s;
-  /*アニメーションの設定*/
-  position: absolute;
-  left: 14px;
-  height: 3px;
-  border-radius: 2px;
-  background: #cfcfcf;
-  width: 45%;
-}
+  @include m.mq(sp){
+     width: 40px;
+     right: 22px;
+     top: 60px;
 
-// .openbtn1 {
-//   display: block;
-//   position: fixed;
-//   /*ボタン内側の基点となるためrelativeを指定*/
-//   cursor: pointer;
-//   width: 50px;
-//   height: 50px;
-//   border-radius: 5px;
-//   right: 10px;
-//   top: 10px;
-//   z-index: 999;
-// }
+  }
+}
 
 /*ボタン内側*/
 .openbtn1 span {
@@ -185,11 +188,15 @@
   transition: all .4s;
   /*アニメーションの設定*/
   position: absolute;
-  left: 14px;
-  height: 3px;
+  left: 0px;
+  height: 8px;
   border-radius: 2px;
   background: #cfcfcf;
-  width: 45%;
+  width: 100%;
+
+  @include m.mq(sp){
+     height: 5px;
+  }
 }
 
 .openbtn1 span:nth-of-type(1) {
@@ -197,20 +204,28 @@
 }
 
 .openbtn1 span:nth-of-type(2) {
-  top: 23px;
+  top: 33px;
+
+  @include m.mq(sp){
+     top: 27px;
+
+}
 }
 
 .openbtn1 span:nth-of-type(3) {
-  top: 31px;
+  top: 51px;
+  @include m.mq(sp){
+     top: 39px;
+  }
 }
 
 /*activeクラスが付与されると線が回転して×に*/
 
 .openbtn1.active span:nth-of-type(1) {
   top: 18px;
-  left: 18px;
+  left: 0px;
   transform: translateY(6px) rotate(-45deg);
-  width: 30%;
+  width: 100%;
 }
 
 .openbtn1.active span:nth-of-type(2) {
@@ -220,7 +235,25 @@
 
 .openbtn1.active span:nth-of-type(3) {
   top: 30px;
-  left: 18px;
+  left: 0px;
   transform: translateY(-6px) rotate(45deg);
-  width: 30%;
+  width: 100%;
+}
+
+.popup-bg-cover {
+  opacity: 0;
+
+  position: fixed;
+  z-index: -9999;
+
+}
+.popup-bg-cover.active {
+  opacity: 1;
+  position: fixed;
+  background: rgba(0, 0, 0, .5);
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
 }

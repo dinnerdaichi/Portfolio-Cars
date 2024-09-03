@@ -1,0 +1,182 @@
+@use '../foundation/variable' as v;
+@use "../foundation/mixin" as m;
+
+
+/*==================================================
+スマホ　ナビ
+===================================*/
+
+.sp_header {
+
+  position: fixed;
+  display: block;
+  background-color: v.$color-base;
+  font-size: 2rem;
+  right: -100%;
+  z-index: 990;
+  padding: 100px 30px;
+  width: 30%;
+  transition: all 1s 0s ease;
+  border-radius: 0px 0 0 50px;
+  height: 100%;
+
+  @include m.mq(sp) {
+    width: 60%;
+  }
+}
+
+.sp_header.active {
+  right: 0px;
+  transition: all 0.5s 0s ease;
+  top: 0;
+}
+
+.fixed__s-nav {
+  text-align: left;
+  z-index: 990;
+
+  li {
+    margin-top: 30px;
+
+    a {
+      color: v.$color-black;
+      display: block;
+      width: 100%;
+    }
+  }
+
+}
+
+.nav-back {
+  opacity: 0;
+  transition: all 1s 0s ease;
+}
+
+.nav-back.active {
+  position: fixed;
+  display: block;
+  background-color: #6f6f6f70;
+  width: 100vw;
+  height: 100vh;
+  z-index: 900;
+  opacity: 1;
+}
+
+
+.nav_item {
+  margin-top: 20px;
+
+  a {
+    display: block;
+    font-size: 3rem;
+    width: 100%;
+
+    span {
+      display: block;
+      margin: 0 auto;
+      font-size: 10px;
+    }
+  }
+}
+
+/*==================================================
+　5-2-1 3本線が×に
+===================================*/
+/*ボタン外側※レイアウトによってpositionや形状は適宜変更してください*/
+
+.openbtn1 {
+  display: block;
+  position: fixed;
+  cursor: pointer;
+  width: 50px;
+  height: 100px;
+  border-radius: 5px;
+  right: 40px;
+  top: 55px;
+  z-index: 999;
+
+  @include m.mq(sp) {
+    width: 40px;
+    right: 22px;
+    top: 60px;
+
+  }
+}
+
+/*ボタン内側*/
+.openbtn1 span {
+  display: inline-block;
+  transition: all .4s;
+  /*アニメーションの設定*/
+  position: absolute;
+  left: 0px;
+  height: 8px;
+  border-radius: 2px;
+  background: #cfcfcf;
+  width: 100%;
+
+  @include m.mq(sp) {
+    height: 5px;
+  }
+}
+
+.openbtn1 span:nth-of-type(1) {
+  top: 15px;
+}
+
+.openbtn1 span:nth-of-type(2) {
+  top: 33px;
+
+  @include m.mq(sp) {
+    top: 27px;
+
+  }
+}
+
+.openbtn1 span:nth-of-type(3) {
+  top: 51px;
+
+  @include m.mq(sp) {
+    top: 39px;
+  }
+}
+
+/*activeクラスが付与されると線が回転して×に*/
+
+.openbtn1.active span:nth-of-type(1) {
+  top: 18px;
+  left: 0px;
+  transform: translateY(6px) rotate(-45deg);
+  width: 100%;
+}
+
+.openbtn1.active span:nth-of-type(2) {
+  opacity: 0;
+  /*真ん中の線は透過*/
+}
+
+.openbtn1.active span:nth-of-type(3) {
+  top: 30px;
+  left: 0px;
+  transform: translateY(-6px) rotate(45deg);
+  width: 100%;
+}
+
+.popup-bg-cover {
+  opacity: 0;
+
+  position: fixed;
+  z-index: -9999;
+
+}
+
+.popup-bg-cover.active {
+  opacity: 1;
+  position: fixed;
+  background: rgba(0, 0, 0, .5);
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
