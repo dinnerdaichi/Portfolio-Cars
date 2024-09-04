@@ -23,6 +23,8 @@ $white = 'white';
     <?php endif; ?>
 
     <?php remove_filter('the_content', 'wpautop'); ?>
-    <p class="c-section__sub-title"><?php the_content(); ?></p>
+    <!-- <div class="c-section__sub-title">
+      <?php the_content(); ?>
+    </div> -->
   </div>
 </div>

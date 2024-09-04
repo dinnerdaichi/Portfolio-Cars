@@ -19,7 +19,7 @@
     <?php if (!is_user_logged_in()) : ?>
       <style type="text/css">
         .header {
-          margin-top:-32px;
+          margin-top: -32px;
         }
       </style>
     <?php endif; ?>

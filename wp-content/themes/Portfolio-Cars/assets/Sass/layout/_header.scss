@@ -40,6 +40,8 @@ header.active{
 .header__logo{
   width: 500px;
   margin-left: 30px;
+  // display: flex;
+  // justify-content: space-between;
 
   @include m.mq(sp){
      width: 50%;

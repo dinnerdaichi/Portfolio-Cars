@@ -979,6 +979,11 @@ main.p-mentenance {
   font-size: 3rem;
   width: 100%;
 }
+@media screen and (max-width:767px) {
+  .nav_item a {
+    font-size: 2.6rem;
+  }
+}
 .nav_item a span {
   display: block;
   margin: 0 auto;
