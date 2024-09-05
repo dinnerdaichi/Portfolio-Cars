@@ -56,7 +56,7 @@
         <ul class="p-top-service__grid">
 
           <li class="p-top-service__item wow animated slideInLeft">
-            <a href="">
+            <a href="<?php echo home_url('/maintenance') ?>">
               <div class="p-top-service__item-img">
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/img/maintenance01.jpg" alt="">
               </div>
@@ -66,7 +66,7 @@
           </li>
 
           <li class="p-top-service__item wow animated slideInLeft">
-            <a href="">
+            <a href="<?php echo home_url('/paint') ?>">
               <div class="p-top-service__item-img">
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/img/paint01.jpg" alt="">
               </div>

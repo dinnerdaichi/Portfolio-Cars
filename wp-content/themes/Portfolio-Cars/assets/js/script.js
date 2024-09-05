@@ -16,6 +16,7 @@ $(function () {
     $(".sp_header").toggleClass('active');
     $(".sp_back").toggleClass('active');
     $(".popup-bg-cover").toggleClass('active');
+    $(".openbtn1").toggleClass('active');
   });
 
 

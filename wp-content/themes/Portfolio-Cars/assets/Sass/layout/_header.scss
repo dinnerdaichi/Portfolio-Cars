@@ -20,7 +20,7 @@ height: 120px;
 
   @include m.mq(sp){
 
-  height: 80px;
+  height: 60px;
 
 }
 }
@@ -45,5 +45,6 @@ header.active{
 
   @include m.mq(sp){
      width: 50%;
+     margin-left: 10px;
   }
 }

@@ -16,13 +16,13 @@
   <div class="popup-bg-cover"></div>
   <header class="header">
 
-    <?php if (!is_user_logged_in()) : ?>
+    <!-- <?php if (!is_user_logged_in()) : ?>
       <style type="text/css">
         .header {
           margin-top: -32px;
         }
       </style>
-    <?php endif; ?>
+    <?php endif; ?> -->
 
     <div class="header__logo">
       <a href="<?php echo home_url(); ?>"> <img src="<?php echo get_template_directory_uri(); ?>/assets/img/logo.png" alt=""></a>
